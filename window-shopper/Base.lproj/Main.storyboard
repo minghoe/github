@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="window_shopper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="xUc-xc-bJg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-gc-yom">
+                                <rect key="frame" x="157.5" y="55" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bso-50-UNX"/>
+                                    <constraint firstAttribute="width" constant="60" id="cK6-Gv-Dmx"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLX-8a-jV6" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="36" y="150" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xbT-Q4-yS9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-TB-1OS" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="36" y="215" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mca-ud-Tq1"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gEZ-TB-1OS" firstAttribute="height" secondItem="kLX-8a-jV6" secondAttribute="height" id="4VF-Rr-lki"/>
+                            <constraint firstAttribute="trailing" secondItem="xUc-xc-bJg" secondAttribute="trailing" id="CS3-bu-VGG"/>
+                            <constraint firstItem="gEZ-TB-1OS" firstAttribute="trailing" secondItem="kLX-8a-jV6" secondAttribute="trailing" id="ChY-zd-JRa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kLX-8a-jV6" secondAttribute="trailing" constant="20" id="Igi-jG-29F"/>
+                            <constraint firstItem="kLX-8a-jV6" firstAttribute="top" secondItem="ef1-gc-yom" secondAttribute="bottom" constant="35" id="KFh-zg-iQm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xUc-xc-bJg" secondAttribute="bottom" id="Qtf-n1-feE"/>
+                            <constraint firstItem="xUc-xc-bJg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xac-lQ-vEk"/>
+                            <constraint firstItem="kLX-8a-jV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="dcg-bh-aD5"/>
+                            <constraint firstItem="xUc-xc-bJg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="djW-69-lki"/>
+                            <constraint firstItem="gEZ-TB-1OS" firstAttribute="leading" secondItem="kLX-8a-jV6" secondAttribute="leading" id="dmW-UZ-XhB"/>
+                            <constraint firstItem="ef1-gc-yom" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="fpt-eF-pmS"/>
+                            <constraint firstItem="ef1-gc-yom" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lem-3C-8vQ"/>
+                            <constraint firstItem="gEZ-TB-1OS" firstAttribute="top" secondItem="kLX-8a-jV6" secondAttribute="bottom" constant="25" id="x6d-we-xCT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="gEZ-TB-1OS" id="znV-r2-Xg3"/>
+                        <outlet property="wageTxt" destination="kLX-8a-jV6" id="qqV-6Z-LJw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="windowShopperBG" width="414" height="736"/>
+        <image name="windowShopperIcon" width="115" height="115"/>
+    </resources>
 </document>
