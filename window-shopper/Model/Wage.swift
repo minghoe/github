@@ -7,8 +7,20 @@
 //
 
 import Foundation
+
+
+
+
 class Wage {
-    class func getHours(forWage wage: Double, andPrice price: Double) -> Int {
-        return Int(ceil(price / wage))
+    class func getHours(forWage wage: Double, andPrice price: Double) -> Double {
+       
+        let answer = (price / wage)
+        let y = Double(round(100000000*answer)/100000000)
+        
+        return y
     }
 }
+
+
+
+

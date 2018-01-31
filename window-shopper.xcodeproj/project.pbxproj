@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571DA4E61FF6B20800245B8E /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DA4E51FF6B20800245B8E /* BorderButton.swift */; };
+		57D66D741FE7AA2900A4303C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D66D731FE7AA2800A4303C /* GoogleMobileAds.framework */; };
 		89D60F561EF88FED00526602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F551EF88FED00526602 /* AppDelegate.swift */; };
 		89D60F581EF88FED00526602 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F571EF88FED00526602 /* MainVC.swift */; };
 		89D60F5B1EF88FED00526602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D60F591EF88FED00526602 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		571DA4E51FF6B20800245B8E /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		57D66D731FE7AA2800A4303C /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		89D60F521EF88FED00526602 /* window-shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "window-shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D60F551EF88FED00526602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D60F571EF88FED00526602 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D66D741FE7AA2900A4303C /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +94,7 @@
 				89D60F591EF88FED00526602 /* Main.storyboard */,
 				89D60F5C1EF88FED00526602 /* Assets.xcassets */,
 				89D60F5E1EF88FED00526602 /* LaunchScreen.storyboard */,
+				57D66D731FE7AA2800A4303C /* GoogleMobileAds.framework */,
 				89D60F611EF88FED00526602 /* Info.plist */,
 			);
 			path = "window-shopper";
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				89D60F691EF8919E00526602 /* CurrencyTxtField.swift */,
+				571DA4E51FF6B20800245B8E /* BorderButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 				89D60F6A1EF8919E00526602 /* CurrencyTxtField.swift in Sources */,
 				89D60F7B1EF89A8500526602 /* Wage.swift in Sources */,
 				89D60F581EF88FED00526602 /* MainVC.swift in Sources */,
+				571DA4E61FF6B20800245B8E /* BorderButton.swift in Sources */,
 				89D60F561EF88FED00526602 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,10 +389,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NUW936ZHH8;
+				DEVELOPMENT_TEAM = L5X99274SZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/window-shopper/Controller",
+					"$(PROJECT_DIR)/window-shopper",
+				);
 				INFOPLIST_FILE = "window-shopper/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.devslopes.window-shopper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.batmannn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,10 +409,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NUW936ZHH8;
+				DEVELOPMENT_TEAM = L5X99274SZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/window-shopper/Controller",
+					"$(PROJECT_DIR)/window-shopper",
+				);
 				INFOPLIST_FILE = "window-shopper/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.devslopes.window-shopper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.batmannn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,6 +483,7 @@
 				89D60F771EF89A6000526602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
